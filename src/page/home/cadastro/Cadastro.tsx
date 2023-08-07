@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Usuario from '../../../models/Usuario'
 import { cadastrarUsuario } from '../../../services/Service'
 import './Cadastro.css'
+import { toastAlerta } from '../../../util/toastAlerta'
 
 function Cadastro() {
 
@@ -54,14 +55,14 @@ function Cadastro() {
 
       try {
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuarioResposta)
-        alert('Usuário cadastrado com sucesso')
+        toastAlerta('Usuário cadastrado com sucesso', 'sucesso')
 
       } catch (error) {
-        alert('Erro ao cadastrar o Usuário')
+        toastAlerta('ERRO ao cadastrar Usuário', 'erro')
       }
 
     } else {
-      alert('Dados inconsistentes. Verifique as informações de cadastro.')
+      toastAlerta('Dados inconsistentes. Verifique as informações de cadastro.', 'erro')
       setUsuario({ ...usuario, senha: "" }) // Reinicia o campo de Senha
       setConfirmaSenha("")                  // Reinicia o campo de Confirmar Senha
     }
@@ -135,6 +136,7 @@ function Cadastro() {
           </div>
           <div className="flex justify-around w-full gap-8">
             <button className='rounded text-white bg-red-500 hover:bg-red-900 w-1/2 py-2' onClick={back}>
+     
               Cancelar
             </button>
             <button className='rounded text-white bg-sky-300 hover:bg-sky-600 w-1/2 py-2' type='submit'>

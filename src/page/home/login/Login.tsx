@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import UsuarioLogin from '../../../models/UsuaLogin';
 import { RotatingLines } from 'react-loader-spinner';
+import gifImage from '../../assets/gif.jpg';
 
 function Login() {
   let navigate = useNavigate();
@@ -75,6 +76,8 @@ function login(e: ChangeEvent<HTMLFormElement>) {
           /> :
             <span>Entrar</span>}
           </button>
+        
+
 
           <hr className="border-slate-800 w-full" />
 
