@@ -6,7 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import UsuarioLogin from '../../../models/UsuaLogin';
 import { RotatingLines } from 'react-loader-spinner';
-import gifImage from '../../assets/gif.jpg';
+import Carrossel from '../../../components/carrossel/Carrossel'
+
 
 function Login() {
   let navigate = useNavigate();
@@ -39,7 +40,8 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
+      <Carrossel />
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-[#495DDE]">
         <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
           <h2 className="text-slate-900 text-5xl ">Entrar</h2>
           <div className="flex flex-col w-full">
@@ -78,7 +80,6 @@ function login(e: ChangeEvent<HTMLFormElement>) {
           </button>
         
 
-
           <hr className="border-slate-800 w-full" />
 
           <p>
@@ -90,6 +91,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
         </form>
         <div className="fundoLogin hidden lg:block"></div>
       </div>
+    
     </>
   );
 }
