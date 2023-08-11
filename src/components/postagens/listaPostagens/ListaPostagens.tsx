@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../../contexts/AuthContext';
-import Postagem from '../../../../models/Postagem';
-import { buscar } from '../../../../services/Service';
-import CardPostagem from '../CardPostagem';
-import { toastAlerta } from '../../../../util/toastAlerta';
+import { AuthContext } from '../../../contexts/AuthContext';
+import Postagem from '../../../models/Postagem';
+import { buscar } from '../../../services/Service';
+import CardPostagem from '../cardPostagens/CardPostagem';
+import { toastAlerta } from '../../../util/toastAlerta';
 
 function ListaPostagens() {
   const [postagens, setPostagens] = useState<Postagem[]>([]);

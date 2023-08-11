@@ -10,7 +10,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import ListaTemas from './components/listaTemas/ListaTemas';
 import FormularioTema from './components/formularioTema/FormularioTema';
 import DeletarTema from './components/deletarTemas/DeletarTemas';
-import ListaPostagens from './components/postagens/cardPostagens/listaPostagens/ListaPostagens';
+import ListaPostagens from './components/postagens/listaPostagens/ListaPostagens';
 import FormularioPostagem from './components/postagens/formularioPostagem/FormularioPostagem';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import Perfil from './page/home/perfil/Perfil';

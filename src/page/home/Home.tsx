@@ -1,6 +1,6 @@
 import homeLogo from '../../assets/imagem.svg'
 import './Home.css';
-import ListaPostagens from '../../components/postagens/cardPostagens/listaPostagens/ListaPostagens';
+import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import { Link } from 'react-router-dom';
 
