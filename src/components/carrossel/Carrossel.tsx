@@ -12,7 +12,7 @@ import "./Carrossel.css";
 // Importando Modulos do Carrossel
 import { Navigation, Pagination } from 'swiper/modules';
 import img from '../../assets/stitch.gif';
-import imgs from '../../assets/foto.jpg';
+import imgs from '../../assets/loginLogo.jpg';
 
 function Carrossel() {
 

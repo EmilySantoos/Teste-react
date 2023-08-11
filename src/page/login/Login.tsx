@@ -3,11 +3,11 @@ import './Login.css';
 
 import { Link, useNavigate } from 'react-router-dom';
 
-import { AuthContext } from '../../../contexts/AuthContext';
-import UsuarioLogin from '../../../models/UsuaLogin';
-import { RotatingLines } from 'react-loader-spinner';
-import Carrossel from '../../../components/carrossel/Carrossel'
 
+import { RotatingLines } from 'react-loader-spinner';
+import UsuarioLogin from '../../models/UsuaLogin';
+import { AuthContext } from '../../contexts/AuthContext';
+// import Carrossel from '../../components/carrossel/Carrossel';
 
 function Login() {
   let navigate = useNavigate();
@@ -16,9 +16,7 @@ function Login() {
     {} as UsuarioLogin
   );
 
-  const { usuario, handleLogin } = useContext(AuthContext);
-
-  const {isLoading} = useContext(AuthContext) 
+  const { usuario, handleLogin, isLoading } = useContext(AuthContext);
 
   useEffect(() => {
     if (usuario.token !== "") {
@@ -40,7 +38,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 
   return (
     <>
-      <Carrossel />
+      {/* <Carrossel /> */}
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-[#495DDE]">
         <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
           <h2 className="text-slate-900 text-5xl ">Entrar</h2>

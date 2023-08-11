@@ -3,19 +3,19 @@ import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './page/home/login/Login';
-import Cadastro from './page/home/cadastro/Cadastro';
+import Cadastro from './page/cadastro/Cadastro';
 import Home from './page/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
-import ListaTemas from './components/listaTemas/ListaTemas';
-import FormularioTema from './components/formularioTema/FormularioTema';
-import DeletarTema from './components/deletarTemas/DeletarTemas';
+import ListaTemas from './components/temas/listaTemas/ListaTemas';
 import ListaPostagens from './components/postagens/listaPostagens/ListaPostagens';
 import FormularioPostagem from './components/postagens/formularioPostagem/FormularioPostagem';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
-import Perfil from './page/home/perfil/Perfil';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import FormularioTema from './components/temas/formularioTema/FormularioTema';
+import DeletarTema from './components/temas/deletarTemas/DeletarTemas';
+import Perfil from './page/perfil/Perfil';
+import Login from './page/login/Login';
 
 function App() {
   return (
